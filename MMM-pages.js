@@ -151,20 +151,24 @@ Module.register('MMM-pages', {
     MM.getModules()
       .exceptWithClass(this.config.fixed)
       .exceptWithClass(this.config.modules[this.curPage])
-      .enumerate(module => module.hide(
-        self.config.animationTime / 2,
-        { lockString: self.identifier }
-      ));
+      .enumerate((module) => { 
+        //module.hide(
+          //self.config.animationTime / 2,
+          //{ lockString: self.identifier }
+        //)
+        module.style.display = none;
+      });
 
     // Shows all modules meant to be on the current page, after a small delay.
     setTimeout(() => {
       MM.getModules()
         .withClass(self.config.modules[self.curPage])
         .enumerate((module) => {
-          module.show(
-            self.config.animationTime / 2,
-            { lockString: self.identifier }
-          );
+          //module.show(
+          //  self.config.animationTime / 2,
+          //  { lockString: self.identifier }
+          //);
+          module.style.display = block;
         });
     }, this.config.animationTime / 2);
   },
