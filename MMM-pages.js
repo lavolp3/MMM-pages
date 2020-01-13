@@ -156,7 +156,7 @@ Module.register('MMM-pages', {
           //self.config.animationTime / 2,
           //{ lockString: self.identifier }
         //)
-        module.style.display = none;
+        module.style.display = "none";
       });
 
     // Shows all modules meant to be on the current page, after a small delay.
@@ -168,7 +168,7 @@ Module.register('MMM-pages', {
           //  self.config.animationTime / 2,
           //  { lockString: self.identifier }
           //);
-          module.style.display = block;
+          module.style.display = "block";
         });
     }, this.config.animationTime / 2);
   },
